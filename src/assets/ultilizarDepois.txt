@@ -1,0 +1,23 @@
+config main 
+import Home from "./pages/Home.jsx";
+import Movie from "./pages/Movie.jsx";
+import Search from "./pages/Search.jsx";
+
+//
+// 2. main:element={<Movie/>} linka o element à pasta pages. 
+// 1. main:path="movie/:id", está linkando com to={result/:id} de um component, que está mandando para o rota <Movie/>. Será mandado para à rota do id clicado 
+
+
+<BrowserRouter>
+      <Routes>
+        <Route element={<App />}>
+          <Route path="/" element={<Home />} /> // Aparecerá todos os itens em cards com img e nome.
+          <Route path="movie/:id" element={<Movie />} /> // Terá as infos de um filme específico 
+          <Route path="search" element={<Search />} />
+        </Route>
+      </Routes>
+</BrowserRouter>
+
+
+
+50:00
